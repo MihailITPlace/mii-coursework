@@ -10,7 +10,7 @@ function App() {
           <Grid.Column width={4}>
           </Grid.Column>
           <Grid.Column width={8}>
-            <Header as='h1'>Coursework</Header>
+            <Header style={{marginTop: "0.2em"}} as='h1'>Coursework</Header>
             <Search/>
           </Grid.Column>
           <Grid.Column width={4}>

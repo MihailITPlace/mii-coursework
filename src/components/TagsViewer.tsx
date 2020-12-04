@@ -3,7 +3,7 @@ import {MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import {Post} from "../service/Models";
 import PostView from "./PostView";
 import _ from "lodash";
-import {LatLng, LatLngBounds} from "leaflet";
+import {Icon, LatLng, LatLngBounds, Point} from "leaflet";
 
 interface TagsProps {
     posts: Post[]

@@ -1,4 +1,5 @@
 import React from "react";
+// @ts-ignore
 import {BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar} from 'recharts';
 
 
@@ -9,19 +10,19 @@ interface RegionsProps {
 const RegionsInfo = ({regions}: RegionsProps) => {
     const data = Object.keys(regions).map(k => (
         // @ts-ignore
-        {x: k, y: regions[k] as number}
+        {x: k, count: regions[k] as number}
     ))
 
     return (
-        <div>
-            <BarChart width={600} height={300} data={data}
+        <div style={{marginTop: "1em"}}>
+            <BarChart width={800} height={300} data={data}
                       margin={{top: 5, right: 30, left: 20, bottom: 5}}>
                 <CartesianGrid strokeDasharray="3 3"/>
                 <XAxis dataKey="x"/>
                 <YAxis/>
                 <Tooltip/>
                 <Legend />
-                <Bar dataKey="y" fill="#8884d8" />
+                <Bar dataKey="count" fill="#009c95" />
             </BarChart>
         </div>
     );
