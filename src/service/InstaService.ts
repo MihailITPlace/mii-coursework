@@ -1,9 +1,9 @@
 import Axios from "axios";
-import {UserInfo} from "./Models";
+import {Regions, UserInfo} from "./Models";
 
 export class InstaService {
-    private readonly USER_ENDPOINT = "https://mapper-instagram.herokuapp.com/api/user/"
-    private readonly GEOCODER_ENDPOINT = "https://geocoder-instagram.herokuapp.com/api/user/?name="
+    private readonly USER_ENDPOINT = "http://c1.fuzzylab.ru/api/user/";
+    private readonly GEOCODER_ENDPOINT = "http://localhost:5000/api/user/?name=";
 
     private static instance: InstaService;
     private constructor() { }
@@ -21,6 +21,6 @@ export class InstaService {
     }
 
     public getRegions(nickname: string) {
-        return Axios.get<object>(this.GEOCODER_ENDPOINT + nickname)
+        return Axios.get<Regions>(this.GEOCODER_ENDPOINT + nickname)
     }
 }

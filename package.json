@@ -1,8 +1,10 @@
 {
   "name": "mii-coursework",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
+    "@david.kucsai/react-pdf-table": "^0.3.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -50,6 +52,12 @@
     ]
   },
   "devDependencies": {
-    "@types/leaflet": "^1.5.19"
+    "@react-pdf/renderer": "^1.6.12",
+    "@types/leaflet": "^1.5.19",
+    "@types/react-pdf": "^5.0.0",
+    "@types/recharts": "^1.8.18",
+    "react-pdf": "^5.1.0",
+    "react-to-pdf": "0.0.13",
+    "recharts-to-png": "^0.8.2"
   }
 }

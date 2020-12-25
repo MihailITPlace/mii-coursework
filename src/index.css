@@ -11,3 +11,56 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.userCard {
+  /*margin-top: 4em;*/
+  display: flex;
+  align-items: center;
+}
+
+.userAvatar {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+}
+
+.userCard_info {
+  margin-left: 2em;
+}
+
+.userCard b {
+  font-size: 1.4em;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.userCard p {
+  margin: 0;
+}
+
+.postsNav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageSlider {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 2.5em;
+  top: 30%;
+}
+
+.imageSlider span {
+  background-color: rgba(255, 255, 255, 0.53);
+  cursor: pointer;
+  transition: 0.15s ease-in-out;
+}
+
+.imageSlider span:hover {
+    background-color: white;
+  /*color: rgba(119, 255, 184, 0.77);*/
+}
