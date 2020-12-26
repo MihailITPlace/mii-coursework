@@ -36,6 +36,18 @@ const addMA = (data: DataRow[], windowSize: number): DataRow[] => {
     return monthsMA;
 };
 
+const addEMA = (data: DataRow[], alpha: number): DataRow[] => {
+    const monthsMA: DataRow[] = [...data];
+
+    monthsMA[0].ma = monthsMA[0].count;
+
+    for (let i = 1; i < monthsMA.length; i++) {
+        monthsMA[i].ma = Math.round(alpha*monthsMA[i].count + (1-alpha)*(monthsMA[i-1].ma as number));
+    }
+
+    return monthsMA;
+};
+
 
 const PostsTimeSeries = ({posts, saveChart}: PostsTimeSeriesProps) => {
     const [data, setData] = useState<DataRow[]>([]);
@@ -68,7 +80,8 @@ const PostsTimeSeries = ({posts, saveChart}: PostsTimeSeriesProps) => {
             return { ...m, name: m.name.slice(3) }
         });
 
-        const dataMA = addMA(months, 2);
+        // const dataMA = addMA(months, 2);
+        const dataMA = addEMA(months, 0.5);
         setData(dataMA);
     }, []);
 

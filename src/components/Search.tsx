@@ -128,14 +128,14 @@ const Search = () => {
                     }
                 </Segment>
             }
-            { user && regions &&
-                <PDFDownloadLink
-                    style={user && regions ? styles.link : styles.unlink}
-                    document={<Report regions={regions} regionsChart={regionsChart} user={user} postsChart={postsChart} />}
-                    fileName="report.pdf">
-                    {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Сформировать отчет по поиску')}
-                </PDFDownloadLink>
-            }
+            {/*{ user && regions &&*/}
+            {/*    <PDFDownloadLink*/}
+            {/*        style={user && regions ? styles.link : styles.unlink}*/}
+            {/*        document={<Report regions={regions} regionsChart={regionsChart} user={user} postsChart={postsChart} />}*/}
+            {/*        fileName="report.pdf">*/}
+            {/*        {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Сформировать отчет по поиску')}*/}
+            {/*    </PDFDownloadLink>*/}
+            {/*}*/}
         </div>
     );
 }
